@@ -121,6 +121,7 @@ def make_single_images(predir,args):
         dat1 = apt(torch.tensor(gt1, dtype=torch.float32).unsqueeze(0).permute([0, 3, 1, 2]), u, 3, output_size,
                    (l1, l1)).permute([0, 2, 3, 1]).cpu().numpy().reshape(output_size[0], output_size[1], 3)
         VAE_train.append(np.round(dat1.reshape(-1)))
+        sys.stdout.flush()
     VAE_train = np.array(VAE_train).astype(int)
     np.save(os.path.join(predir,'VAE_train'+args.train_data_suffix+'.npy'), VAE_train)
 

@@ -2,8 +2,7 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="d0d8d8df-4c82-4385-b34d-4b638e253320" name="Default Changelist" comment="">
-      <change beforePath="$PROJECT_DIR$/ARGS/args_10_300_nonlin.conf" beforeDir="false" afterPath="$PROJECT_DIR$/ARGS/args_10_300_nonlin.conf" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/ARGS/args_synth.conf" beforeDir="false" afterPath="$PROJECT_DIR$/ARGS/args_synth.conf" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/synthetic_dataset.py" beforeDir="false" afterPath="$PROJECT_DIR$/synthetic_dataset.py" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
@@ -28,7 +27,7 @@
       <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/utils.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="959">
+            <state relative-caret-position="8325">
               <caret line="563" column="4" selection-start-line="563" selection-start-column="4" selection-end-line="563" selection-end-column="4" />
               <folding>
                 <element signature="e#0#18#0" expanded="true" />
@@ -60,17 +59,17 @@
       <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/train_faster_rcnn_occ.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="-493">
-              <caret line="143" column="26" lean-forward="true" selection-start-line="143" selection-start-column="26" selection-end-line="143" selection-end-column="26" />
+            <state relative-caret-position="2145">
+              <caret line="143" column="26" selection-start-line="143" selection-start-column="26" selection-end-line="143" selection-end-column="26" />
             </state>
           </provider>
         </entry>
       </file>
-      <file pinned="false" current-in-tab="false">
+      <file pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/synthetic_dataset.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="151">
-              <caret line="396" selection-start-line="396" selection-end-line="396" />
+            <state relative-caret-position="320">
+              <caret line="123" column="26" selection-start-line="123" selection-start-column="26" selection-end-line="123" selection-end-column="26" />
               <folding>
                 <element signature="e#0#9#0" expanded="true" />
               </folding>
@@ -87,10 +86,10 @@
           </provider>
         </entry>
       </file>
-      <file pinned="false" current-in-tab="true">
+      <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/ARGS/args_10_300_nonlin.conf">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="339">
+            <state relative-caret-position="436">
               <caret line="50" column="13" selection-start-line="50" selection-start-column="13" selection-end-line="50" selection-end-column="13" />
             </state>
           </provider>
@@ -99,7 +98,7 @@
       <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/train_vae.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="-34">
+            <state relative-caret-position="3195">
               <caret line="213" column="86" selection-start-line="213" selection-start-column="80" selection-end-line="213" selection-end-column="86" />
             </state>
           </provider>
@@ -108,7 +107,7 @@
       <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/greedy_algorithm.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="-188">
+            <state relative-caret-position="11790">
               <caret line="786" column="42" selection-start-line="786" selection-start-column="34" selection-end-line="786" selection-end-column="42" />
             </state>
           </provider>
@@ -125,7 +124,6 @@
   </component>
   <component name="FindInProjectRecents">
     <findStrings>
-      <find>test_images_size</find>
       <find>EE</find>
       <find>args</find>
       <find>models</find>
@@ -155,6 +153,7 @@
       <find>save</find>
       <find>final_model_path</find>
       <find>predir</find>
+      <find>flush</find>
     </findStrings>
     <replaceStrings>
       <replace>latent_space_dimension</replace>
@@ -208,7 +207,6 @@
         <option value="$PROJECT_DIR$/VAE/args_default.conf" />
         <option value="$USER_HOME$/Google Drive/Colab Notebooks/synthetic_dataset.py" />
         <option value="$PROJECT_DIR$/synthetic_dataset_new.py" />
-        <option value="$PROJECT_DIR$/synthetic_dataset.py" />
         <option value="$PROJECT_DIR$/VAE/train_vae.py" />
         <option value="$PROJECT_DIR$/ARGS/args_default.conf" />
         <option value="$PROJECT_DIR$/utils.py" />
@@ -218,6 +216,7 @@
         <option value="$PROJECT_DIR$/example_run.sh" />
         <option value="$PROJECT_DIR$/ARGS/args_synth.conf" />
         <option value="$PROJECT_DIR$/ARGS/args_10_300_nonlin.conf" />
+        <option value="$PROJECT_DIR$/synthetic_dataset.py" />
       </list>
     </option>
   </component>
@@ -233,7 +232,6 @@
       <foldersAlwaysOnTop value="true" />
     </navigator>
     <panes>
-      <pane id="Scope" />
       <pane id="ProjectPane">
         <subPane>
           <expand>
@@ -250,6 +248,7 @@
           <select />
         </subPane>
       </pane>
+      <pane id="Scope" />
     </panes>
   </component>
   <component name="PropertiesComponent">
@@ -463,18 +462,19 @@
       <workItem from="1671112318215" duration="4537000" />
       <workItem from="1671168220735" duration="798000" />
       <workItem from="1671169112618" duration="3424000" />
+      <workItem from="1671311459718" duration="41000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="302893000" />
+    <option name="totallyTimeSpent" value="302934000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="114" y="105" width="1179" height="684" extended-state="0" />
     <editor active="true" />
     <layout>
-      <window_info active="true" content_ui="combo" id="Project" order="0" sideWeight="0.61440676" visible="true" weight="0.31134564" />
-      <window_info id="Structure" order="1" sideWeight="0.3855932" side_tool="true" visible="true" weight="0.31134564" />
+      <window_info active="true" content_ui="combo" id="Project" order="0" sideWeight="0.6115993" visible="true" weight="0.3166227" />
+      <window_info id="Structure" order="1" sideWeight="0.3884007" side_tool="true" visible="true" weight="0.3166227" />
       <window_info id="Favorites" order="2" sideWeight="0.19543509" side_tool="true" weight="0.2871138" />
       <window_info anchor="bottom" id="Message" order="0" />
       <window_info anchor="bottom" id="Find" order="1" weight="0.32890856" />
@@ -489,12 +489,12 @@
       <window_info anchor="bottom" id="Event Log" order="10" side_tool="true" />
       <window_info anchor="bottom" id="Terminal" order="11" />
       <window_info anchor="bottom" id="Python Console" order="12" weight="0.42650917" />
-      <window_info anchor="right" id="Coverage" side_tool="true" />
       <window_info anchor="right" id="Commander" order="0" weight="0.4" />
       <window_info anchor="right" id="Ant Build" order="1" weight="0.25" />
       <window_info anchor="right" content_ui="combo" id="Hierarchy" order="2" weight="0.25" />
       <window_info anchor="right" id="SciView" order="3" weight="0.5565093" />
       <window_info anchor="right" id="Database" order="4" />
+      <window_info anchor="right" id="Coverage" order="5" side_tool="true" />
     </layout>
     <layout-to-restore>
       <window_info active="true" content_ui="combo" id="Project" order="0" sideWeight="0.8045649" visible="true" weight="0.403644" />
@@ -598,15 +598,7 @@ plt.show()</expression-string>
     <entry file="file://$PROJECT_DIR$/VAE/args_conv_b.conf" />
     <entry file="file://$PROJECT_DIR$/../misc/run_script_in_conda.sh" />
     <entry file="file://$PROJECT_DIR$/VAE/args_conv.conf" />
-    <entry file="file://$PROJECT_DIR$/VAE/try.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state>
-          <folding>
-            <element signature="e#0#18#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
+    <entry file="file://$PROJECT_DIR$/VAE/try.py" />
     <entry file="file://$PROJECT_DIR$/mytorchvision/models/detection/image_list.py" />
     <entry file="file://$PROJECT_DIR$/mytorchvision/models/_utils.py" />
     <entry file="file://$PROJECT_DIR$/mytorchvision/utils.py" />
@@ -704,11 +696,7 @@ plt.show()</expression-string>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/VAE/lib.py" />
-    <entry file="file://$PROJECT_DIR$/output/greedy_algo_2022-12-14_15_40.txt">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-1110" />
-      </provider>
-    </entry>
+    <entry file="file://$PROJECT_DIR$/output/greedy_algo_2022-12-14_15_40.txt" />
     <entry file="file:///opt/anaconda3/lib/python3.7/re.py">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="312">
@@ -752,27 +740,21 @@ plt.show()</expression-string>
         </state>
       </provider>
     </entry>
-    <entry file="file://$USER_HOME$/Google Drive/Colab Notebooks/synthetic_dataset.py">
+    <entry file="file://$USER_HOME$/Google Drive/Colab Notebooks/synthetic_dataset.py" />
+    <entry file="file://$PROJECT_DIR$/utils.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="75">
-          <caret line="403" column="23" lean-forward="true" selection-start-line="403" selection-start-column="23" selection-end-line="403" selection-end-column="23" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/synthetic_dataset.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="151">
-          <caret line="396" selection-start-line="396" selection-end-line="396" />
+        <state relative-caret-position="8325">
+          <caret line="563" column="4" selection-start-line="563" selection-start-column="4" selection-end-line="563" selection-end-column="4" />
           <folding>
-            <element signature="e#0#9#0" expanded="true" />
+            <element signature="e#0#18#0" expanded="true" />
           </folding>
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/train_vae.py">
+    <entry file="file://$PROJECT_DIR$/ARGS/args_synth.conf">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-34">
-          <caret line="213" column="86" selection-start-line="213" selection-start-column="80" selection-end-line="213" selection-end-column="86" />
+        <state relative-caret-position="135">
+          <caret line="9" column="19" selection-start-line="9" selection-start-column="19" selection-end-line="9" selection-end-column="19" />
         </state>
       </provider>
     </entry>
@@ -785,6 +767,13 @@ plt.show()</expression-string>
         </state>
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/train_faster_rcnn_occ.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="2145">
+          <caret line="143" column="26" selection-start-line="143" selection-start-column="26" selection-end-line="143" selection-end-column="26" />
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/example_run.sh">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="60">
@@ -792,41 +781,34 @@ plt.show()</expression-string>
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/ARGS/args_synth.conf">
+    <entry file="file://$PROJECT_DIR$/train_vae.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="135">
-          <caret line="9" column="19" selection-start-line="9" selection-start-column="19" selection-end-line="9" selection-end-column="19" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/utils.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="959">
-          <caret line="563" column="4" selection-start-line="563" selection-start-column="4" selection-end-line="563" selection-end-column="4" />
-          <folding>
-            <element signature="e#0#18#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/train_faster_rcnn_occ.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-493">
-          <caret line="143" column="26" lean-forward="true" selection-start-line="143" selection-start-column="26" selection-end-line="143" selection-end-column="26" />
+        <state relative-caret-position="3195">
+          <caret line="213" column="86" selection-start-line="213" selection-start-column="80" selection-end-line="213" selection-end-column="86" />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/greedy_algorithm.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-188">
+        <state relative-caret-position="11790">
           <caret line="786" column="42" selection-start-line="786" selection-start-column="34" selection-end-line="786" selection-end-column="42" />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/ARGS/args_10_300_nonlin.conf">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="339">
+        <state relative-caret-position="436">
           <caret line="50" column="13" selection-start-line="50" selection-start-column="13" selection-end-line="50" selection-end-column="13" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/synthetic_dataset.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="320">
+          <caret line="123" column="26" selection-start-line="123" selection-start-column="26" selection-end-line="123" selection-end-column="26" />
+          <folding>
+            <element signature="e#0#9#0" expanded="true" />
+          </folding>
         </state>
       </provider>
     </entry>

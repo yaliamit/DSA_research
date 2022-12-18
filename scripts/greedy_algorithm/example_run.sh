@@ -1,3 +1,5 @@
+#!/bin/bash
+set -x
 # Create the synthetic training set for faster_rcnn with pairs of objects 
 # and then use the individual objects from that set for a training set for training the decoder. i
 # Also create the detetction test set with 5-7 objects 
@@ -8,7 +10,7 @@ python3 synthetic_dataset.py --config_file=args_synth.conf --train_data_suffix=_
 python3 train_vae.py --config_file=args_10_300_nonlin.conf --train_data_suffix=_aoc --model_name=aoc_10_300_nonlin.pt > out_vae.txt
 # Train faster_rcnn with occlusion on data created above -
 # write out parameters to fasterrcnn_occ_aoc_5000
-python3 train_faster_rcnn_occ.py --config_file=args_frcnn.conf --run_gpu=1 --cnn_num_train=4000 --cnn_num_valid=1000 --train_data_suffix=_aoc > out_frcnn.txt
+python3 train_faster_rcnn_occ.py --config_file=args_frcnn.conf --run_gpu=1 --cnn_num_train=4000 --cnn_num_valid=1000 --train_data_suffix=_aoc --n_epoch=3 > out_frcnn.txt
 # Test trained faster_rcnn trained above with just soft_nms - output written to output/greedy*
 # Detection threshold is .6
 python3 greedy_algorithm.py --config_file=args_10_300_nonlin.conf --faster_rcnn=fasterrcnn_occ_aoc_5000 --soft_nms=1 --detect_thresh=.6 --run_parallel=4 --test_data_suffix=_aoc --process_likelihoods=0 --vae_decoder=aoc_10_300_nonlin.pt > out_gr.txt

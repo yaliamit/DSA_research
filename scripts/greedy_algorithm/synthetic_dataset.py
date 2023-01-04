@@ -1,4 +1,5 @@
 import os
+import sys
 import platform
 import pyvista as pv
 
@@ -224,7 +225,7 @@ def make_two_object_scenes(num_train,predir,args,n_objects_scene=2):
         train_object1.append(objs[0].reshape(-1))
         train_gt.append(np.array([objs_gts[1],objs_gts[0]]))
       if cnt_num%10==0: print("cnt_num",cnt_num)
-
+      sys.stdout.flush()
     train_data, train_object0, train_object1, train_gt = np.array(train_data),np.array(train_object0),np.array(train_object1),np.array(train_gt)
     np.save(os.path.join(predir,'train_data'+args.train_data_suffix+'.npy'), train_data)
     np.save(os.path.join(predir,'train_object0'+args.train_data_suffix+'.npy'), train_object0)
@@ -330,7 +331,7 @@ def generate_detection_test_data(test_num,predir,args,valid='False'):
                 find_bb(np.repeat(obj_supports[i].reshape(args.test_image_size, args.test_image_size, 1), 3, 2).reshape(-1), size=(args.test_image_size, args.test_image_size)))
         for _ in range(max_objects - n_objects_scene): tmp_boxes_gt.append([0, 0, 0, 0])
         test_boxes_gt.append(tmp_boxes_gt)
-
+        sys.stdout.flush()
     test_data=np.array(test_data)
     test_gt=np.array(test_gt)
     test_boxes_gt = np.array(test_boxes_gt)

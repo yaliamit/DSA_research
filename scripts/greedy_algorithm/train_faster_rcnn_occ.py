@@ -79,7 +79,7 @@ if __name__ == "__main__":
     torch.manual_seed(0)
     np.random.seed(0)
     random.seed(0)
-    batch_size = 10
+    batch_size = 1
     total_train_loss = []
     patience = 10
     trigger_times = 0
@@ -110,11 +110,11 @@ if __name__ == "__main__":
     traindata = Faster_Rcnn_Dataset(train_dat.reshape(-1, args.test_image_size, args.test_image_size, 3),
                                     train_gt_boxes)
     trainloader = torch.utils.data.DataLoader(traindata, batch_size=batch_size,
-                                              shuffle=False, num_workers=2)
+                                              shuffle=False) #, num_workers=2)
     validdata = Faster_Rcnn_Dataset(valid_dat.reshape(-1, args.test_image_size, args.test_image_size, 3),
                                     valid_gt_boxes)
     validloader = torch.utils.data.DataLoader(validdata, batch_size=batch_size,
-                                              shuffle=False, num_workers=2)
+                                              shuffle=False) #, num_workers=2)
 
     if args.cnn_type == 'occ':
         from mytorchvision.faster_rcnn import FastRCNNPredictor

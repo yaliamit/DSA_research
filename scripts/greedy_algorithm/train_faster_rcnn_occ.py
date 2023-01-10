@@ -34,15 +34,20 @@ class Faster_Rcnn_Dataset(Dataset):
         area = (gt_boxes[:, 3] - gt_boxes[:, 1]) * (gt_boxes[:, 2] - gt_boxes[:, 0])
         area = torch.as_tensor(area, dtype=torch.float32)
 
+
         # there is only one class
         labels = gt_boxes[:, 4]
-
+        if -1 in list(labels):
+            real_num = list(labels).index(-1)
+        else:
+            real_num = len(labels)
+        labels = labels[0:real_num]
         # suppose all instances are not crowd
         iscrowd = torch.zeros((gt_boxes[:, 4].shape[0],), dtype=torch.int64)
 
         target = {}
-        temp_boxes = gt_boxes[:, 0:4]
-        temp_labels = np.concatenate((labels.reshape(-1,1),np.array(range(len(gt_boxes))).reshape(-1,1)),1)
+        temp_boxes = gt_boxes[0:real_num, 0:4]
+        temp_labels = np.concatenate((labels.reshape(-1,1),np.array(range(len(labels))).reshape(-1,1)),1)
        #temp_labelsa = np.concatenate((labels.reshape(2,1), np.array([[0], [1]])), 1)
         # if np.random.randint(0,2,1)[0]==1:
         #     temp_boxes = np.concatenate((temp_boxes[1:2,:], temp_boxes[0:1,:]), 0)
@@ -106,7 +111,7 @@ if __name__ == "__main__":
     print('Train data shape:',train_dat.shape, train_gt_boxes.shape)
     train_gt_boxes[:, :, 4][train_gt_boxes[:, :, 4] == 0] = 10
     print('Numbers of each class:', Counter(train_gt_boxes[:, :, 4].reshape(-1)))
-
+    max_obj_num=train_gt_boxes.shape[1]
     train_num, valid_num = args.cnn_num_train, args.cnn_num_valid
     train_dat, train_gt_boxes, valid_dat, valid_gt_boxes = train_dat[:train_num, :], train_gt_boxes[:train_num, :, :], \
         train_dat[train_num:(train_num + valid_num),:], train_gt_boxes[train_num:(train_num + valid_num),:, :]
@@ -114,11 +119,11 @@ if __name__ == "__main__":
     print('train and valid data:', train_dat.shape, train_gt_boxes.shape, valid_dat.shape, valid_gt_boxes.shape)
 
     traindata = Faster_Rcnn_Dataset(train_dat.reshape(-1, args.test_image_size, args.test_image_size, 3),
-                                    train_gt_boxes)
+                                    train_gt_boxes,max_obj_num)
     trainloader = torch.utils.data.DataLoader(traindata, batch_size=batch_size,
                                               shuffle=False) #, num_workers=2)
     validdata = Faster_Rcnn_Dataset(valid_dat.reshape(-1, args.test_image_size, args.test_image_size, 3),
-                                    valid_gt_boxes)
+                                    valid_gt_boxes,max_obj_num)
     validloader = torch.utils.data.DataLoader(validdata, batch_size=batch_size,
                                               shuffle=False) #, num_workers=2)
 
@@ -139,7 +144,7 @@ if __name__ == "__main__":
     print('number of input features',in_features)
 
     # replace the pre-trained head with a new one
-    model.roi_heads.box_predictor = FastRCNNPredictor(in_features, num_classes)
+    model.roi_heads.box_predictor = FastRCNNPredictor(in_features, num_classes,max_obj_num)
     model.to(device)
     params = [p for p in model.parameters() if p.requires_grad]
     optimizer = torch.optim.SGD(params, lr=0.005, momentum=0.9, weight_decay=0.0005)

@@ -17,10 +17,11 @@ warnings.filterwarnings("ignore", category=UserWarning)
 
 # We assume the training data has pairs of objects
 class Faster_Rcnn_Dataset(Dataset):
-    def __init__(self, img_data, img_gt_boxes):
+    def __init__(self, img_data, img_gt_boxes, max_num_boxes=2):
         super().__init__()
         self.images = img_data  # data_frame['image_id'].unique()
         self.img_gt_boxes = img_gt_boxes
+        self.max_num_boxes=max_num_boxes
         self.transforms = False  # get_transforms(phase)
 
     def __len__(self):
@@ -41,10 +42,15 @@ class Faster_Rcnn_Dataset(Dataset):
 
         target = {}
         temp_boxes = gt_boxes[:, 0:4]
-        temp_labels = np.concatenate((labels.reshape(2,1), np.array([[0], [1]])), 1)
-        if np.random.randint(0,2,1)[0]==1:
-            temp_boxes = np.concatenate((temp_boxes[1:2,:], temp_boxes[0:1,:]), 0)
-            temp_labels = np.concatenate((temp_labels[1:2,:], temp_labels[0:1,:]), 0)
+        temp_labels = np.concatenate((labels.reshape(-1,1),np.array(range(len(gt_boxes))).reshape(-1,1)),1)
+       #temp_labelsa = np.concatenate((labels.reshape(2,1), np.array([[0], [1]])), 1)
+        # if np.random.randint(0,2,1)[0]==1:
+        #     temp_boxes = np.concatenate((temp_boxes[1:2,:], temp_boxes[0:1,:]), 0)
+        #     temp_labels = np.concatenate((temp_labels[1:2,:], temp_labels[0:1,:]), 0)
+        ii=np.array(range(len(temp_labels)))
+        np.random.shuffle(ii)
+        temp_boxes=temp_boxes[ii]
+        temp_labels=temp_labels[ii]
         target['boxes'] = temp_boxes
         target['labels'] = temp_labels
         target['image_id'] = torch.tensor(idx)

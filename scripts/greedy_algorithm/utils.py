@@ -4,7 +4,9 @@ import os
 import sys
 from configparser import ExtendedInterpolation
 import configparser
-import cv2, json
+import json
+#import cv2
+from PIL import Image
 from collections import Counter
 import datetime
 
@@ -473,7 +475,7 @@ def add_clutter(image,radius,num_clutter):
     for k in  qq0:
             x=k[0]
             y=k[1]
-            image=cv2.circle(image,(x,y),radius,color,-1)
+            #image=cv2.circle(image,(x,y),radius,color,-1)
 
     return image
 
@@ -483,6 +485,8 @@ def resize_objects(args,image):
         big_image = np.zeros((args.big_dim, args.big_dim, 3))
         hh = (args.big_dim - args.test_image_size) // 2
         big_image[hh:hh + args.test_image_size, hh:hh + args.test_image_size] = image
+        image = np.array(Image.fromarray(np.uint8(big_image*255)).resize((args.test_image_size, args.test_image_size)))/255.
+
         image = cv2.resize(big_image, (args.test_image_size, args.test_image_size))
     else:
         crop_size = args.big_dim
@@ -495,7 +499,8 @@ def resize_objects(args,image):
         bg = np.zeros((crop_size, crop_size, 3))
         bg[upperleft[0]:(upperleft[0] + target_size_j[0]), upperleft[1]:(upperleft[1] + target_size_j[1]
                                                                                  ), :] = image[bb[1]:bb[3], bb[0]:bb[2],                                                                     :]
-        image = cv2.resize(bg, (args.test_image_size, args.test_image_size))
+        image = np.array(Image.fromarray(np.uint8(bg*255)).resize((args.test_image_size, args.test_image_size)))/255.
+        #image = cv2.resize(bg, (args.test_image_size, args.test_image_size))
 
     return image
 

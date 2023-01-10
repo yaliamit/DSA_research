@@ -5,8 +5,7 @@ import sys
 from configparser import ExtendedInterpolation
 import configparser
 import json
-#import cv2
-from PIL import Image
+import cv2
 from collections import Counter
 import datetime
 
@@ -475,7 +474,7 @@ def add_clutter(image,radius,num_clutter):
     for k in  qq0:
             x=k[0]
             y=k[1]
-            #image=cv2.circle(image,(x,y),radius,color,-1)
+            image=cv2.circle(image,(x,y),radius,color,-1)
 
     return image
 
@@ -499,8 +498,7 @@ def resize_objects(args,image):
         bg = np.zeros((crop_size, crop_size, 3))
         bg[upperleft[0]:(upperleft[0] + target_size_j[0]), upperleft[1]:(upperleft[1] + target_size_j[1]
                                                                                  ), :] = image[bb[1]:bb[3], bb[0]:bb[2],                                                                     :]
-        image = np.array(Image.fromarray(np.uint8(bg*255)).resize((args.test_image_size, args.test_image_size)))/255.
-        #image = cv2.resize(bg, (args.test_image_size, args.test_image_size))
+        image = cv2.resize(bg, (args.test_image_size, args.test_image_size))
 
     return image
 

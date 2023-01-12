@@ -42,7 +42,7 @@ def fastrcnn_loss(class_logits, box_regression, occlusion_prediction, labels, re
 
     #print(class_logits.shape, labels.shape, occlusion_prediction.shape, occlusion_targets.shape)
     classification_loss = F.cross_entropy(class_logits, labels,size_average=True)
-    occlusion_loss = F.cross_entropy(occlusion_prediction, occlusion_targets,size_average=Tre)
+    occlusion_loss = F.cross_entropy(occlusion_prediction, occlusion_targets,size_average=True)
 
     # get indices that correspond to the regression targets for
     # the corresponding ground truth labels, to be used with

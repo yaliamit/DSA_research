@@ -37,17 +37,14 @@ class Faster_Rcnn_Dataset(Dataset):
 
         # there is only one class
         labels = gt_boxes[:, 4]
-        if -1 in list(labels):
-            real_num = list(labels).index(-1)
-        else:
-            real_num = len(labels)
-        labels = labels[0:real_num]
+        labels[labels==-1]=-100
         # suppose all instances are not crowd
         iscrowd = torch.zeros((gt_boxes[:, 4].shape[0],), dtype=torch.int64)
 
         target = {}
-        temp_boxes = gt_boxes[0:real_num, 0:4]
+        temp_boxes = gt_boxes[:, 0:4]
         temp_labels = np.concatenate((labels.reshape(-1,1),np.array(range(len(labels))).reshape(-1,1)),1)
+        temp_labels[labels[0,:]==-100,1]=-100
        #temp_labelsa = np.concatenate((labels.reshape(2,1), np.array([[0], [1]])), 1)
         # if np.random.randint(0,2,1)[0]==1:
         #     temp_boxes = np.concatenate((temp_boxes[1:2,:], temp_boxes[0:1,:]), 0)

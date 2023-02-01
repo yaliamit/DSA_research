@@ -44,7 +44,7 @@ class Faster_Rcnn_Dataset(Dataset):
         target = {}
         temp_boxes = gt_boxes[:, 0:4]
         ii=np.where(area==0)
-        temp_boxes[ii,:]=np.array([0,1,0,1])
+        temp_boxes[ii,:]=np.array([0,0,1,1])
         temp_labels = np.concatenate((labels.reshape(-1,1),np.array(range(len(labels))).reshape(-1,1)),1)
         temp_labels[labels == -100, 1] = -100
         ii=np.where(labels>=0)[0]

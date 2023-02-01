@@ -399,6 +399,7 @@ if __name__ == "__main__":
     #make_two_object_scenes(args.cnn_num_train+args.cnn_num_valid,args.predir,args,2)
     #make_single_images(args.predir,args)
     generate_detection_test_data(args.num_test_images,args.predir,args,valid=False)
+    
     #generate_detection_test_data(args.num_test_images,args.predir,args,valid=True)
 
     if args.draw:

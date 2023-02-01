@@ -44,17 +44,23 @@ class Faster_Rcnn_Dataset(Dataset):
         target = {}
         temp_boxes = gt_boxes[:, 0:4]
         ii=np.where(area==0)
-        temp_boxes[ii,:]=np.array([0,0,1,1])
+        temp_boxes[ii,:]=np.array([0,1,0,1])
         temp_labels = np.concatenate((labels.reshape(-1,1),np.array(range(len(labels))).reshape(-1,1)),1)
-        temp_labels[labels==-100,1]=-100
+        temp_labels[labels == -100, 1] = -100
+        ii=np.where(labels>=0)[0]
+        np.random.shuffle(ii)
+        temp_labels[ii[2:],1]=-100
+        iim=np.argmin(temp_labels[ii[0:2],1])
+        iiM=np.argmax(temp_labels[ii[0:2],1])
+        temp_labels[ii[iim],1]=0
+        temp_labels[ii[iiM],1]=1
+        temp_boxes=temp_boxes[ii]
+
        #temp_labelsa = np.concatenate((labels.reshape(2,1), np.array([[0], [1]])), 1)
         # if np.random.randint(0,2,1)[0]==1:
         #     temp_boxes = np.concatenate((temp_boxes[1:2,:], temp_boxes[0:1,:]), 0)
         #     temp_labels = np.concatenate((temp_labels[1:2,:], temp_labels[0:1,:]), 0)
-        ii=np.array(range(len(temp_labels)))
-        np.random.shuffle(ii)
-        temp_boxes=temp_boxes[ii]
-        temp_labels=temp_labels[ii]
+
         target['boxes'] = temp_boxes
         target['labels'] = temp_labels
         target['image_id'] = torch.tensor(idx)

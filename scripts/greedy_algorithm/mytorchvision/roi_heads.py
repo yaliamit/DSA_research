@@ -683,7 +683,6 @@ class RoIHeads(nn.Module):
         # type: (...) -> Tuple[List[Tensor], List[Tensor], List[Tensor]]
         device = class_logits.device
         num_classes = class_logits.shape[-1]
-
         boxes_per_image = [boxes_in_image.shape[0] for boxes_in_image in proposals]
         pred_boxes = self.box_coder.decode(box_regression, proposals)
 
@@ -711,6 +710,7 @@ class RoIHeads(nn.Module):
             scores = scores[:, 1:]
             labels = labels[:, 1:]
             occlusion_scores = occlusion_scores[:,1:].repeat(1, 10)
+
             #print(boxes.shape, scores.shape, labels.shape, occlusion_scores.shape)
 
             # batch everything, by making every class prediction be a separate instance

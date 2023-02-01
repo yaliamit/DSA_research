@@ -680,6 +680,7 @@ def test_example(i0, bg_test, test_gt, test_boxes_gt, fasterrcnn_model, vae_deco
         bb = temp[0]['boxes'].cpu().detach().numpy().astype(int)
         pred_labels = temp[0]['labels'].cpu().numpy()
         scores = np.round(temp[0]['scores'].cpu().detach().numpy(), 2)
+        #occlusion_scores = np.argmax(temp[0],['occlusion_scores'].cpu().detach().numpy())
         occlusion_scores = np.round(temp[0]['occlusion_scores'].cpu().detach().numpy(), 3)
         if args.soft_nms:
             pred_labels, scores, bb, occlusion_scores = soft_nms(pred_labels, scores, bb, occlusion_scores)

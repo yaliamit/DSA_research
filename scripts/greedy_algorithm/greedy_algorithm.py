@@ -746,13 +746,13 @@ def read_decoder(rank, args, device):
     return vae_decoder.to(device)
 
 
-def read_fasterrcnn(rank, args):
+def read_fasterrcnn(rank, args, max_obj_num=7):
     """Reads in fasterrcnn model."""
     faster_rcnn = fasterrcnn_resnet50_fpn(pretrained=False)
     # get number of input features for the classifier
     in_features = faster_rcnn.roi_heads.box_predictor.cls_score.in_features
     # replace the pre-trained head with a new one
-    faster_rcnn.roi_heads.box_predictor = FastRCNNPredictor(in_features, args.num_class+1)
+    faster_rcnn.roi_heads.box_predictor = FastRCNNPredictor(in_features, args.num_class+1,max_obj_num)
     #params = [p for p in faster_rcnn.parameters() if p.requires_grad]
     #optimizer = torch.optim.SGD(params, lr=0.005, momentum=0.9, weight_decay=0.0005)
     # load check point
@@ -786,7 +786,7 @@ def main(rank, world_size, args):
     torch.manual_seed(42)
 
     bg_test,test_boxes_gt,test_gt=get_data(args)
-
+    max_obj_num = test_boxes_gt.shape[1]
 
     # ========================================================================
 
@@ -797,7 +797,7 @@ def main(rank, world_size, args):
         vae_decoder = read_decoder(args.run_gpu, args, device)
 
     # read fasterrcnn into memory in process executing on rank
-    fasterrcnn_model = read_fasterrcnn(rank, args)
+    fasterrcnn_model = read_fasterrcnn(rank, args, max_obj_num)
 
     start_time = time.time()
 

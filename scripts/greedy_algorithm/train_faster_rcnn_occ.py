@@ -95,7 +95,7 @@ if __name__ == "__main__":
     torch.manual_seed(0)
     np.random.seed(0)
     random.seed(0)
-    batch_size = 1
+    batch_size = 10
     total_train_loss = []
     patience = 10
     trigger_times = 0

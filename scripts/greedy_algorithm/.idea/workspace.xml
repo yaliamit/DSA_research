@@ -6,6 +6,7 @@
   <component name="ChangeListManager">
     <list default="true" id="86814392-e250-46f8-9449-465beb1059a7" name="Changes" comment="">
       <change beforePath="$PROJECT_DIR$/synthetic_dataset.py" beforeDir="false" afterPath="$PROJECT_DIR$/synthetic_dataset.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/train_faster_rcnn_occ.py" beforeDir="false" afterPath="$PROJECT_DIR$/train_faster_rcnn_occ.py" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
@@ -22,13 +23,36 @@
   <component name="FileEditorManager">
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
       <file pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/train_faster_rcnn_occ.py">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="165">
+              <caret line="97" column="19" selection-start-line="97" selection-start-column="19" selection-end-line="97" selection-end-column="19" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/synthetic_dataset.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="134">
-              <caret line="401" column="4" selection-start-line="401" selection-start-column="4" selection-end-line="401" selection-end-column="4" />
+            <state relative-caret-position="216">
+              <caret line="283" column="7" selection-start-line="283" selection-start-column="7" selection-end-line="283" selection-end-column="7" />
               <folding>
                 <element signature="e#0#9#0" expanded="true" />
               </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/ARGS/args_frcnn.conf">
+          <provider selected="true" editor-type-id="text-editor" />
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/ARGS/args_default.conf">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="75">
+              <caret line="5" column="4" selection-start-line="5" selection-end-line="5" selection-end-column="4" />
             </state>
           </provider>
         </entry>
@@ -52,6 +76,10 @@
       <find>postprocess_detections</find>
       <find>loss</find>
       <find>binary</find>
+      <find>generate_de</find>
+      <find>num_epo</find>
+      <find>num_epochs</find>
+      <find>n_ep</find>
     </findStrings>
   </component>
   <component name="FlaskConsoleOptions" custom-start-script="import sys&#10;sys.path.extend([WORKING_DIR_AND_PYTHON_PATHS])&#10;from flask.cli import ScriptInfo&#10;locals().update(ScriptInfo(create_app=None).load_app().make_shell_context())&#10;print(&quot;Python %s on %s\nApp: %s [%s]\nInstance: %s&quot; % (sys.version, sys.platform, app.import_name, app.env, app.instance_path))">
@@ -74,8 +102,8 @@
         <option value="$PROJECT_DIR$/merge_data.py" />
         <option value="$PROJECT_DIR$/greedy_algorithm.py" />
         <option value="$PROJECT_DIR$/mytorchvision/roi_heads.py" />
-        <option value="$PROJECT_DIR$/train_faster_rcnn_occ.py" />
         <option value="$PROJECT_DIR$/synthetic_dataset.py" />
+        <option value="$PROJECT_DIR$/train_faster_rcnn_occ.py" />
       </list>
     </option>
   </component>
@@ -144,7 +172,7 @@
       </list>
     </option>
   </component>
-  <component name="RunManager" selected="Python.synthetic_dataset">
+  <component name="RunManager" selected="Python.train_faster_rcnn_occ">
     <configuration name="greedy_algorithm" type="PythonConfigurationType" factoryName="Python" temporary="true">
       <module name="greedy_algorithm" />
       <option name="INTERPRETER_OPTIONS" value="" />
@@ -275,7 +303,7 @@
       <window_info anchor="bottom" id="Message" order="0" />
       <window_info anchor="bottom" id="Find" order="1" />
       <window_info anchor="bottom" id="Run" order="2" weight="0.32857144" />
-      <window_info anchor="bottom" id="Debug" order="3" visible="true" weight="0.33089313" />
+      <window_info anchor="bottom" id="Debug" order="3" visible="true" weight="0.09809663" />
       <window_info anchor="bottom" id="Cvs" order="4" weight="0.25" />
       <window_info anchor="bottom" id="Inspection" order="5" weight="0.4" />
       <window_info anchor="bottom" id="TODO" order="6" />
@@ -467,13 +495,6 @@
     <entry file="file://$PROJECT_DIR$/ARGS/args_synth.conf">
       <provider selected="true" editor-type-id="text-editor" />
     </entry>
-    <entry file="file://$PROJECT_DIR$/train_faster_rcnn_occ.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="84">
-          <caret line="67" selection-start-line="67" selection-end-line="67" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/mytorchvision/faster_rcnn.py">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="154">
@@ -490,9 +511,6 @@
           <caret line="681" selection-start-line="681" selection-end-line="681" />
         </state>
       </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/ARGS/args_default.conf">
-      <provider selected="true" editor-type-id="text-editor" />
     </entry>
     <entry file="file://$PROJECT_DIR$/merge_data.py">
       <provider selected="true" editor-type-id="text-editor">
@@ -516,11 +534,28 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/synthetic_dataset.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="134">
-          <caret line="401" column="4" selection-start-line="401" selection-start-column="4" selection-end-line="401" selection-end-column="4" />
+        <state relative-caret-position="216">
+          <caret line="283" column="7" selection-start-line="283" selection-start-column="7" selection-end-line="283" selection-end-column="7" />
           <folding>
             <element signature="e#0#9#0" expanded="true" />
           </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/ARGS/args_frcnn.conf">
+      <provider selected="true" editor-type-id="text-editor" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/ARGS/args_default.conf">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="75">
+          <caret line="5" column="4" selection-start-line="5" selection-end-line="5" selection-end-column="4" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/train_faster_rcnn_occ.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="165">
+          <caret line="97" column="19" selection-start-line="97" selection-start-column="19" selection-end-line="97" selection-end-column="19" />
         </state>
       </provider>
     </entry>

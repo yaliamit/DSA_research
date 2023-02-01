@@ -54,7 +54,7 @@ class Faster_Rcnn_Dataset(Dataset):
         iiM=np.argmax(temp_labels[ii[0:2],1])
         temp_labels[ii[iim],1]=0
         temp_labels[ii[iiM],1]=1
-        temp_boxes=temp_boxes[ii]
+
 
        #temp_labelsa = np.concatenate((labels.reshape(2,1), np.array([[0], [1]])), 1)
         # if np.random.randint(0,2,1)[0]==1:

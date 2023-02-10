@@ -309,9 +309,10 @@ def generate_detection_test_data(test_num,predir,args,valid='False'):
         for i in range(n_objects_scene):
             obj_dis[i]=((np.array(cams[i][0]) - objs_centers[i]) ** 2).sum()
 
-        obj_dis.sort()
-        obj_dis=obj_dis[::-1]
-        for i in range(n_objects_scene):
+        #ii=range(n_objects_scene)
+        ii=obj_dis.argsort()
+        ii=ii[::-1]
+        for i in ii:
             tmp_support = obj_supports[i].copy()
             for j in range(n_objects_scene):
                 # the difference between plotter.camera_position[0] and objs_centers[.] gives us occlusion sequence
@@ -329,14 +330,14 @@ def generate_detection_test_data(test_num,predir,args,valid='False'):
         cnt_num += 1
         test_data.append(dat.reshape(-1))
         tmp_gt = [n_objects_scene]
-        for i in range(n_objects_scene): tmp_gt.append(n_objects_labels[i])
+        for i in ii: tmp_gt.append(n_objects_labels[i])
         for _ in range(max_objects - n_objects_scene): tmp_gt.append(-1)
         test_gt.append(tmp_gt)
         if cnt_num % 100 == 0: print("cnt_num", cnt_num)
 
         # ground truth of bounding boxes
         tmp_boxes_gt = []
-        for i in range(n_objects_scene):
+        for i in ii:
             tmp_boxes_gt.append(
                 find_bb(np.repeat(obj_supports[i].reshape(args.test_image_size, args.test_image_size, 1), 3, 2).reshape(-1), size=(args.test_image_size, args.test_image_size)))
         for _ in range(max_objects - n_objects_scene): tmp_boxes_gt.append([0, 0, 0, 0])
@@ -414,10 +415,10 @@ if __name__ == "__main__":
 
     if args.draw:
 
-        show_test_data(args.predir,args,valid=True)
+        #show_test_data(args.predir,args,valid=True)
         show_test_data(args.predir,args,valid=False)
-        show_train_data(args.predir,args)
-        show_VAE_data(args.predir,args)
+        #show_train_data(args.predir,args)
+        #show_VAE_data(args.predir,args)
 
 
 

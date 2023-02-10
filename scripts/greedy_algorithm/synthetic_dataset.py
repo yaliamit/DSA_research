@@ -208,6 +208,8 @@ def make_two_object_scenes(num_train,predir,args,n_objects_scene=2):
           objs_gts.append(find_bb(img,size=(args.test_image_size,args.test_image_size)))
           objs_gts[i].append(n_objects_labels[i])
 
+
+      # Put further away object as True and will be recorded first.
       cnt0, cnt1, occlu_seq = (objs[0].sum(2)>0).sum(), (objs[1].sum(2)>0).sum(), ((
           np.array(cam[0])-objs_centers[0])**2).sum()>((np.array(cam[0])-objs_centers[1])**2).sum()
 
@@ -301,6 +303,14 @@ def generate_detection_test_data(test_num,predir,args,valid='False'):
             cams.append(cam)
             objs_centers.append(objc)
 
+
+        # Order objects based on distance to camera:
+        obj_dis=np.zeros(n_objects_scene)
+        for i in range(n_objects_scene):
+            obj_dis[i]=((np.array(cams[i][0]) - objs_centers[i]) ** 2).sum()
+
+        obj_dis.sort()
+        obj_dis=obj_dis[::-1]
         for i in range(n_objects_scene):
             tmp_support = obj_supports[i].copy()
             for j in range(n_objects_scene):

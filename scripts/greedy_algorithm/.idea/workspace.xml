@@ -4,7 +4,10 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="86814392-e250-46f8-9449-465beb1059a7" name="Changes" comment="" />
+    <list default="true" id="86814392-e250-46f8-9449-465beb1059a7" name="Changes" comment="">
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/synthetic_dataset.py" beforeDir="false" afterPath="$PROJECT_DIR$/synthetic_dataset.py" afterDir="false" />
+    </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -15,15 +18,27 @@
     <SUITE FILE_PATH="coverage/greedy_algorithm$merge_data.coverage" NAME="merge_data Coverage Results" MODIFIED="1673540878330" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$" />
     <SUITE FILE_PATH="coverage/greedy_algorithm$greedy_algorithm.coverage" NAME="greedy_algorithm Coverage Results" MODIFIED="1675281319296" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$" />
     <SUITE FILE_PATH="coverage/greedy_algorithm$train_faster_rcnn_occ.coverage" NAME="train_faster_rcnn_occ Coverage Results" MODIFIED="1675277286164" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$" />
-    <SUITE FILE_PATH="coverage/greedy_algorithm$synthetic_dataset.coverage" NAME="synthetic_dataset Coverage Results" MODIFIED="1673553051157" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$" />
+    <SUITE FILE_PATH="coverage/greedy_algorithm$synthetic_dataset.coverage" NAME="synthetic_dataset Coverage Results" MODIFIED="1676042142993" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$" />
   </component>
   <component name="FileEditorManager">
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
       <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/train_faster_rcnn_occ.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="123">
+            <state relative-caret-position="1161">
               <caret line="118" column="5" selection-start-line="118" selection-start-column="5" selection-end-line="118" selection-end-column="39" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/synthetic_dataset.py">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="220">
+              <caret line="323" column="21" lean-forward="true" selection-start-line="323" selection-start-column="21" selection-end-line="323" selection-end-column="21" />
+              <folding>
+                <element signature="e#0#9#0" expanded="true" />
+              </folding>
             </state>
           </provider>
         </entry>
@@ -40,7 +55,7 @@
       <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/mytorchvision/faster_rcnn.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="396">
+            <state relative-caret-position="3945">
               <caret line="279" column="22" selection-start-line="279" selection-start-column="13" selection-end-line="279" selection-end-column="22" />
               <folding>
                 <element signature="e#0#20#0" expanded="true" />
@@ -49,11 +64,11 @@
           </provider>
         </entry>
       </file>
-      <file pinned="false" current-in-tab="true">
+      <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/greedy_algorithm.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="86">
-              <caret line="654" column="14" selection-start-line="654" selection-start-column="7" selection-end-line="654" selection-end-column="14" />
+            <state relative-caret-position="150">
+              <caret line="754" column="31" selection-start-line="754" selection-start-column="31" selection-end-line="754" selection-end-column="31" />
             </state>
           </provider>
         </entry>
@@ -61,7 +76,7 @@
       <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/merge_data.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="270">
+            <state relative-caret-position="255">
               <caret line="18" column="14" selection-start-line="18" selection-start-column="14" selection-end-line="18" selection-end-column="14" />
               <folding>
                 <element signature="e#0#18#0" expanded="true" />
@@ -73,7 +88,7 @@
       <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/mytorchvision/roi_heads.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="178">
+            <state relative-caret-position="10500">
               <caret line="713" column="64" selection-start-line="713" selection-start-column="64" selection-end-line="713" selection-end-column="64" />
               <folding>
                 <element signature="e#0#12#0" expanded="true" />
@@ -128,10 +143,10 @@
     <option name="CHANGED_PATHS">
       <list>
         <option value="$PROJECT_DIR$/mytorchvision/roi_heads.py" />
-        <option value="$PROJECT_DIR$/synthetic_dataset.py" />
         <option value="$PROJECT_DIR$/merge_data.py" />
         <option value="$PROJECT_DIR$/train_faster_rcnn_occ.py" />
         <option value="$PROJECT_DIR$/greedy_algorithm.py" />
+        <option value="$PROJECT_DIR$/synthetic_dataset.py" />
       </list>
     </option>
   </component>
@@ -200,7 +215,7 @@
       </list>
     </option>
   </component>
-  <component name="RunManager" selected="Python.greedy_algorithm">
+  <component name="RunManager" selected="Python.synthetic_dataset">
     <configuration name="greedy_algorithm" type="PythonConfigurationType" factoryName="Python" temporary="true">
       <module name="greedy_algorithm" />
       <option name="INTERPRETER_OPTIONS" value="" />
@@ -259,7 +274,7 @@
       <option name="ADD_SOURCE_ROOTS" value="true" />
       <EXTENSION ID="PythonCoverageRunConfigurationExtension" runner="coverage.py" />
       <option name="SCRIPT_NAME" value="$PROJECT_DIR$/synthetic_dataset.py" />
-      <option name="PARAMETERS" value="--config_file=args_synth.conf --num_test_images=1000 --train_data_suffix=_mmm" />
+      <option name="PARAMETERS" value="--config_file=args_synth.conf --num_test_images=10 --train_data_suffix=_mmm" />
       <option name="SHOW_COMMAND_LINE" value="false" />
       <option name="EMULATE_TERMINAL" value="false" />
       <option name="MODULE_MODE" value="false" />
@@ -297,9 +312,9 @@
     </list>
     <recent_temporary>
       <list>
+        <item itemvalue="Python.synthetic_dataset" />
         <item itemvalue="Python.greedy_algorithm" />
         <item itemvalue="Python.train_faster_rcnn_occ" />
-        <item itemvalue="Python.synthetic_dataset" />
         <item itemvalue="Python.merge_data" />
       </list>
     </recent_temporary>
@@ -325,13 +340,13 @@
     <frame x="0" y="23" width="1393" height="798" extended-state="0" />
     <editor active="true" />
     <layout>
-      <window_info content_ui="combo" id="Project" order="0" visible="true" weight="0.30792007" />
+      <window_info active="true" content_ui="combo" id="Project" order="0" visible="true" weight="0.2257587" />
       <window_info id="Structure" order="1" side_tool="true" weight="0.25" />
       <window_info id="Favorites" order="2" side_tool="true" />
       <window_info anchor="bottom" id="Message" order="0" />
       <window_info anchor="bottom" id="Find" order="1" />
       <window_info anchor="bottom" id="Run" order="2" weight="0.32857144" />
-      <window_info anchor="bottom" id="Debug" order="3" weight="0.5036603" />
+      <window_info anchor="bottom" id="Debug" order="3" visible="true" weight="0.40556368" />
       <window_info anchor="bottom" id="Cvs" order="4" weight="0.25" />
       <window_info anchor="bottom" id="Inspection" order="5" weight="0.4" />
       <window_info anchor="bottom" id="TODO" order="6" />
@@ -340,7 +355,7 @@
       <window_info anchor="bottom" id="Database Changes" order="9" show_stripe_button="false" />
       <window_info anchor="bottom" id="Event Log" order="10" side_tool="true" />
       <window_info anchor="bottom" id="Terminal" order="11" />
-      <window_info anchor="bottom" id="Python Console" order="12" weight="0.18571429" />
+      <window_info anchor="bottom" id="Python Console" order="12" weight="0.34114203" />
       <window_info anchor="right" id="Commander" order="0" weight="0.4" />
       <window_info anchor="right" id="Ant Build" order="1" weight="0.25" />
       <window_info anchor="right" content_ui="combo" id="Hierarchy" order="2" weight="0.25" />
@@ -414,6 +429,16 @@
           <url>file://$PROJECT_DIR$/greedy_algorithm.py</url>
           <line>793</line>
           <option name="timeStamp" value="52" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" suspend="THREAD" type="python-line">
+          <url>file://$PROJECT_DIR$/synthetic_dataset.py</url>
+          <line>311</line>
+          <option name="timeStamp" value="53" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" suspend="THREAD" type="python-line">
+          <url>file://$PROJECT_DIR$/synthetic_dataset.py</url>
+          <line>328</line>
+          <option name="timeStamp" value="54" />
         </line-breakpoint>
       </breakpoints>
       <default-breakpoints>
@@ -508,26 +533,6 @@
     <entry file="file://$PROJECT_DIR$/ARGS/args_synth.conf">
       <provider selected="true" editor-type-id="text-editor" />
     </entry>
-    <entry file="file://$PROJECT_DIR$/synthetic_dataset.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="216">
-          <caret line="283" column="7" selection-start-line="283" selection-start-column="7" selection-end-line="283" selection-end-column="7" />
-          <folding>
-            <element signature="e#0#9#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/merge_data.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="270">
-          <caret line="18" column="14" selection-start-line="18" selection-start-column="14" selection-end-line="18" selection-end-column="14" />
-          <folding>
-            <element signature="e#0#18#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/ARGS/args_frcnn.conf">
       <provider selected="true" editor-type-id="text-editor" />
     </entry>
@@ -545,19 +550,9 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/mytorchvision/roi_heads.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="178">
-          <caret line="713" column="64" selection-start-line="713" selection-start-column="64" selection-end-line="713" selection-end-column="64" />
-          <folding>
-            <element signature="e#0#12#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/mytorchvision/faster_rcnn.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="396">
+        <state relative-caret-position="3945">
           <caret line="279" column="22" selection-start-line="279" selection-start-column="13" selection-end-line="279" selection-end-column="22" />
           <folding>
             <element signature="e#0#20#0" expanded="true" />
@@ -565,17 +560,47 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/train_faster_rcnn_occ.py">
+    <entry file="file://$PROJECT_DIR$/merge_data.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="123">
-          <caret line="118" column="5" selection-start-line="118" selection-start-column="5" selection-end-line="118" selection-end-column="39" />
+        <state relative-caret-position="255">
+          <caret line="18" column="14" selection-start-line="18" selection-start-column="14" selection-end-line="18" selection-end-column="14" />
+          <folding>
+            <element signature="e#0#18#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/mytorchvision/roi_heads.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="10500">
+          <caret line="713" column="64" selection-start-line="713" selection-start-column="64" selection-end-line="713" selection-end-column="64" />
+          <folding>
+            <element signature="e#0#12#0" expanded="true" />
+          </folding>
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/greedy_algorithm.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="86">
-          <caret line="654" column="14" selection-start-line="654" selection-start-column="7" selection-end-line="654" selection-end-column="14" />
+        <state relative-caret-position="150">
+          <caret line="754" column="31" selection-start-line="754" selection-start-column="31" selection-end-line="754" selection-end-column="31" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/train_faster_rcnn_occ.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="1161">
+          <caret line="118" column="5" selection-start-line="118" selection-start-column="5" selection-end-line="118" selection-end-column="39" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/synthetic_dataset.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="220">
+          <caret line="323" column="21" lean-forward="true" selection-start-line="323" selection-start-column="21" selection-end-line="323" selection-end-column="21" />
+          <folding>
+            <element signature="e#0#9#0" expanded="true" />
+          </folding>
         </state>
       </provider>
     </entry>

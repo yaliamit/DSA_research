@@ -116,7 +116,7 @@ if __name__ == "__main__":
     print('Train data shape:',train_dat.shape, train_gt_boxes.shape)
     train_gt_boxes[:, :, 4][train_gt_boxes[:, :, 4] == 0] = 10
     print('Numbers of each class:', Counter(train_gt_boxes[:, :, 4].reshape(-1)))
-    max_obj_num=train_gt_boxes.shape[1]
+    max_obj_num=2 #train_gt_boxes.shape[1]
     train_num, valid_num = args.cnn_num_train, args.cnn_num_valid
     train_dat, train_gt_boxes, valid_dat, valid_gt_boxes = train_dat[:train_num, :], train_gt_boxes[:train_num, :, :], \
         train_dat[train_num:(train_num + valid_num),:], train_gt_boxes[train_num:(train_num + valid_num),:, :]

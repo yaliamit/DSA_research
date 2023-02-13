@@ -748,6 +748,7 @@ def read_decoder(rank, args, device):
 
 def read_fasterrcnn(rank, args, max_obj_num=7):
     """Reads in fasterrcnn model."""
+    max_obj_num=2
     faster_rcnn = fasterrcnn_resnet50_fpn(pretrained=False)
     # get number of input features for the classifier
     in_features = faster_rcnn.roi_heads.box_predictor.cls_score.in_features

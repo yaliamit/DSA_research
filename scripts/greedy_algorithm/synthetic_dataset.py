@@ -357,11 +357,11 @@ def generate_detection_test_data(test_num,predir,args,valid='False'):
 
 def show_train_data(predir,args):
     train_data = np.load(os.path.join(predir,'train_data'+args.train_data_suffix+'.npy'))
-    train_object0 = np.load(os.path.join(predir,'train_object0'+args.train_data_suffix+'.npy'))
-    train_object1 = np.load(os.path.join(predir,'train_object1'+args.train_data_suffix+'.npy'))
+    #train_object0 = np.load(os.path.join(predir,'train_object0'+args.train_data_suffix+'.npy'))
+    #train_object1 = np.load(os.path.join(predir,'train_object1'+args.train_data_suffix+'.npy'))
     train_gt = np.load(os.path.join(predir,'train_gt'+args.train_data_suffix+'.npy'))
 
-    print(train_data.shape, train_object0.shape, train_object1.shape, train_gt.shape)
+    #print(train_data.shape, train_object0.shape, train_object1.shape, train_gt.shape)
 
     print(train_data.shape, train_gt.shape)
 
@@ -369,6 +369,7 @@ def show_train_data(predir,args):
         plt.subplot(1,5,i+1)
         plt.imshow(train_data[i,:].reshape(args.test_image_size,args.test_image_size,3))
         plt.axis('off')
+        plt.xlabel(str(i))
         print(train_gt[i, :, :])
     plt.show()
 
@@ -416,8 +417,8 @@ if __name__ == "__main__":
     if args.draw:
 
         #show_test_data(args.predir,args,valid=True)
-        show_test_data(args.predir,args,valid=False)
-        #show_train_data(args.predir,args)
+        #show_test_data(args.predir,args,valid=False)
+        show_train_data(args.predir,args)
         #show_VAE_data(args.predir,args)
 
 

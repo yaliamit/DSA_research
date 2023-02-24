@@ -211,4 +211,4 @@ if __name__ == "__main__":
             # save checkpoint
             torch.save(checkpoint, checkpoint_path)
 
-
+        sys.stdout.flush()

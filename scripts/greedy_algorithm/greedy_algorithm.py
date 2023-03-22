@@ -177,7 +177,7 @@ def find_code_for_target(target, output, upperleft, vae_decoder, cls_label, mask
     # shift parameters we are learning
     params_shift = torch.zeros(2)
     params_scale = torch.tensor(0.)
-    params_rotate = torch.tensor(0.)
+    params_rotate = torch.tensor(torch.pi*args.angle/180.)
 
     if args.adjust_scale:
         params_scale.requires_grad_(True)
@@ -522,36 +522,50 @@ def detections_selection(vae_decoder, image, scores, bb, occlusion_scores, pred_
             if nkl is not None:
                 temp_selected_nkl_with_i = sum([recons[box_id][1] for box_id in temp_selected])
                 loss_with_i = np.sum((image - reconst_with_i) * (image - reconst_with_i)) + args.lamb * len(
-                    temp_selected) + temp_selected_nkl_with_i
+                    temp_selected)
+                if args.draw:
+                    print('class', pred_labels[i], loss_with_i, loss_with_i-temp_selected_nkl_with_i)
+                loss_with_i-=temp_selected_nkl_with_i
             else:
                 loss_with_i = torch.tensor(float("inf"))
-            if args.recheck[0]!=-1 and pred_labels[i]==args.recheck[0]:
-                temp_pred_labels=pred_labels.copy()
-                temp_pred_labels[i]=args.recheck[1]
-                reconst_with_i_ch, recons_ch, nkl_ch = whole_reconstruction(
-                    vae_decoder,
-                    image,
-                    output_size,
-                    temp_recons,
-                    temp_selected,
-                    bb,
-                    occlusion_scores,
-                    temp_pred_labels,
-                    device,
-                    args,
-                    img_index,
-                    done_recon
-                )
-                if nkl_ch is not None:
-                    temp_selected_nkl_with_i_ch = sum([recons_ch[box_id][1] for box_id in temp_selected])
-                    loss_with_i_ch = np.sum((image - reconst_with_i_ch) * (image - reconst_with_i_ch)) + args.lamb * len(
-                        temp_selected) + temp_selected_nkl_with_i_ch
-                else:
-                    loss_with_i_ch = torch.tensor(float("inf"))
+            if args.recheck[0]!=-2:
+                torecheck=[]
+                if pred_labels[i]>=0 and pred_labels[i]==args.recheck[0]:
+                    torecheck=[args.recheck[1]]
+                elif pred_labels[i]==-1:
+                    torecheck=list(range(args.num_class)).pop(pred_labels[i])
 
-                if loss_with_i_ch < loss_with_i:
-                    loss_with_i=loss_with_i_ch
-                    pred_labels[i]=temp_pred_labels[i]
+                if len(torecheck)>0:
+                  for j in torecheck:
+                    temp_pred_labels=pred_labels.copy()
+                    temp_pred_labels[i]=j
+                    reconst_with_i_ch, recons_ch, nkl_ch = whole_reconstruction(
+                        vae_decoder,
+                        image,
+                        output_size,
+                        temp_recons,
+                        temp_selected,
+                        bb,
+                        occlusion_scores,
+                        temp_pred_labels,
+                        device,
+                        args,
+                        img_index,
+                        done_recon
+                     )
+                    if nkl_ch is not None:
+                        temp_selected_nkl_with_i_ch = sum([recons_ch[box_id][1] for box_id in temp_selected])
+                        loss_with_i_ch = np.sum((image - reconst_with_i_ch) * (image - reconst_with_i_ch)) + args.lamb * len(
+                            temp_selected)
+                        if args.draw:
+                            print('class', j, loss_with_i_ch, loss_with_i_ch-temp_selected_nkl_with_i_ch, loss_with_i)
+                        loss_with_i_ch-=temp_selected_nkl_with_i_ch
+                    else:
+                        loss_with_i_ch = torch.tensor(float("inf"))
+
+                    if loss_with_i_ch < loss_with_i:
+                        loss_with_i=loss_with_i_ch
+                        pred_labels[i]=temp_pred_labels[i]
 
 
 
@@ -586,7 +600,7 @@ def detections_selection(vae_decoder, image, scores, bb, occlusion_scores, pred_
                 # check the loss of the reconstructed image after removing overlapping component
                 if nkl_i_no_j is not None:
                     temp_selected_nkl_i_no_j = sum([recons[box_id][1] for box_id in temp_selected])
-                    loss_i_no_j = np.sum((image - reconst_i_no_j) * (image - reconst_i_no_j)) + args.lamb * len(temp_selected) + temp_selected_nkl_i_no_j
+                    loss_i_no_j = np.sum((image - reconst_i_no_j) * (image - reconst_i_no_j)) + args.lamb * len(temp_selected) - temp_selected_nkl_i_no_j
 
             # compare the losses from different selection configurations and choose the configuration which
             # minimizes the loss
@@ -685,6 +699,10 @@ def test_example(i0, bg_test, test_gt, test_boxes_gt, fasterrcnn_model, vae_deco
         if args.soft_nms:
             pred_labels, scores, bb, occlusion_scores = soft_nms(pred_labels, scores, bb, occlusion_scores)
 
+    # if args.by_occlusion:
+    #     ii=np.argsort(occlusion_scores)
+    #     pred_labels=pred_labels[ii]
+    #     bb=bb[ii]
     if args.draw:
         print(pred_labels, scores, occlusion_scores)
 

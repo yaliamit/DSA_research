@@ -37,6 +37,14 @@ def parse_args(config_parser):
         default=config_parser["testing"]["predir"],
         help="folder for data and models"
     )
+
+    parser.add_argument(
+        "--by_occlusion",
+        type=int,
+        default=config_parser["testing"]["by_occlusion"],
+        help="sort detections by occlusion"
+    )
+
     parser.add_argument(
         "--train_data_suffix",
         type=str,

@@ -5,7 +5,7 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="757946fe-d849-4e9e-9d86-3e64e1a9b1ab" name="Changes" comment="">
-      <change beforePath="$PROJECT_DIR$/ARGS/args_10_300_nonlin.conf" beforeDir="false" afterPath="$PROJECT_DIR$/ARGS/args_10_300_nonlin.conf" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/greedy_algorithm.py" beforeDir="false" afterPath="$PROJECT_DIR$/greedy_algorithm.py" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
@@ -15,18 +15,45 @@
   </component>
   <component name="CoverageDataManager">
     <SUITE FILE_PATH="coverage/greedy_algorithm$merge_data.coverage" NAME="merge_data Coverage Results" MODIFIED="1677206361119" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$" />
-    <SUITE FILE_PATH="coverage/greedy_algorithm$greedy_algorithm.coverage" NAME="greedy_algorithm Coverage Results" MODIFIED="1679494220629" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$" />
+    <SUITE FILE_PATH="coverage/greedy_algorithm$greedy_algorithm.coverage" NAME="greedy_algorithm Coverage Results" MODIFIED="1679521783694" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$" />
     <SUITE FILE_PATH="coverage/greedy_algorithm$train_faster_rcnn_occ.coverage" NAME="train_faster_rcnn_occ Coverage Results" MODIFIED="1677206547487" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$" />
     <SUITE FILE_PATH="coverage/greedy_algorithm$synthetic_dataset.coverage" NAME="synthetic_dataset Coverage Results" MODIFIED="1677194550507" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$" />
   </component>
   <component name="FileEditorManager">
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
-      <file pinned="false" current-in-tab="false">
+      <file pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/greedy_algorithm.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="82">
-              <caret line="758" column="67" selection-start-line="758" selection-start-column="61" selection-end-line="758" selection-end-column="67" />
+            <state relative-caret-position="58">
+              <caret line="558" column="50" lean-forward="true" selection-start-line="558" selection-start-column="50" selection-end-line="558" selection-end-column="50" />
             </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/../../../../courses/LSDA/Lectures/Week1/Clustering_demo.py">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="-312">
+              <folding>
+                <element signature="e#0#34#0" expanded="true" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/example_run.sh">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="135">
+              <caret line="9" column="45" selection-start-line="9" selection-end-line="10" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/train_vae.py">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="-3081" />
           </provider>
         </entry>
       </file>
@@ -42,11 +69,11 @@
           </provider>
         </entry>
       </file>
-      <file pinned="false" current-in-tab="true">
+      <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/ARGS/args_10_300_nonlin.conf">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="31">
-              <caret line="34" column="15" selection-start-line="34" selection-start-column="15" selection-end-line="34" selection-end-column="15" />
+            <state relative-caret-position="71">
+              <caret line="30" column="15" lean-forward="true" selection-start-line="30" selection-start-column="15" selection-end-line="30" selection-end-column="15" />
             </state>
           </provider>
         </entry>
@@ -54,8 +81,8 @@
       <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/ARGS/args_default.conf">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="1080">
-              <caret line="72" column="13" selection-start-line="72" selection-start-column="13" selection-end-line="72" selection-end-column="13" />
+            <state relative-caret-position="402">
+              <caret line="45" column="5" selection-start-line="45" selection-end-line="45" selection-end-column="5" />
             </state>
           </provider>
         </entry>
@@ -68,6 +95,14 @@
       <find>get_data</find>
       <find>recheck</find>
       <find>predir</find>
+      <find>adjust_rotate</find>
+      <find>angle</find>
+      <find>lamb</find>
+      <find>latent_iternum</find>
+      <find>latent_iterm</find>
+      <find>sampl</find>
+      <find>test_latent</find>
+      <find>selection</find>
     </findStrings>
   </component>
   <component name="FlaskConsoleOptions" custom-start-script="import sys&#10;sys.path.extend([WORKING_DIR_AND_PYTHON_PATHS])&#10;from flask.cli import ScriptInfo&#10;locals().update(ScriptInfo(create_app=None).load_app().make_shell_context())&#10;print(&quot;Python %s on %s\nApp: %s [%s]\nInstance: %s&quot; % (sys.version, sys.platform, app.import_name, app.env, app.instance_path))">
@@ -91,8 +126,8 @@
         <option value="$PROJECT_DIR$/synthetic_dataset.py" />
         <option value="$PROJECT_DIR$/train_faster_rcnn_occ.py" />
         <option value="$PROJECT_DIR$/ARGS/args_default.conf" />
-        <option value="$PROJECT_DIR$/greedy_algorithm.py" />
         <option value="$PROJECT_DIR$/ARGS/args_10_300_nonlin.conf" />
+        <option value="$PROJECT_DIR$/greedy_algorithm.py" />
       </list>
     </option>
   </component>
@@ -148,6 +183,7 @@
   <component name="PropertiesComponent">
     <property name="WebServerToolWindowFactoryState" value="false" />
     <property name="settings.editor.selected.configurable" value="com.jetbrains.python.configuration.PyActiveSdkModuleConfigurable" />
+    <property name="two.files.diff.last.used.file" value="$PROJECT_DIR$/output/mr0" />
   </component>
   <component name="RunDashboard">
     <option name="ruleStates">
@@ -176,7 +212,7 @@
       <option name="ADD_SOURCE_ROOTS" value="true" />
       <EXTENSION ID="PythonCoverageRunConfigurationExtension" runner="coverage.py" />
       <option name="SCRIPT_NAME" value="$PROJECT_DIR$/greedy_algorithm.py" />
-      <option name="PARAMETERS" value="--config_file=args_10_300_nonlin.conf --faster_rcnn=fasterrcnn_occ_aoc_5000 --soft_nms=1 --detect_thresh=.3 --test_data_suffix=_aoc --process_likelihoods=1 --vae_decoder=aoc_10_300_nonlin.pt --angle=10 --draw=1 --image_to_process=3 --adjust_rotate=1 --det_background=1" />
+      <option name="PARAMETERS" value="--config_file=args_10_300_nonlin.conf --faster_rcnn=fasterrcnn_occ_aoc_5000 --soft_nms=1 --detect_thresh=.3 --test_data_suffix=_aoc --process_likelihoods=1 --vae_decoder=boc_10_300_nonlin.pt --angle=10 --draw=1 --image_to_process=26 --adjust_rotate=1 --det_background=0" />
       <option name="SHOW_COMMAND_LINE" value="false" />
       <option name="EMULATE_TERMINAL" value="false" />
       <option name="MODULE_MODE" value="false" />
@@ -291,13 +327,13 @@
     <frame x="0" y="23" width="1339" height="774" extended-state="0" />
     <editor active="true" />
     <layout>
-      <window_info active="true" content_ui="combo" id="Project" order="0" visible="true" weight="0.31919816" />
+      <window_info active="true" content_ui="combo" id="Project" order="0" visible="true" weight="0.19660756" />
       <window_info id="Structure" order="1" side_tool="true" weight="0.25" />
       <window_info id="Favorites" order="2" side_tool="true" />
       <window_info anchor="bottom" id="Message" order="0" />
       <window_info anchor="bottom" id="Find" order="1" />
-      <window_info anchor="bottom" id="Run" order="2" weight="0.39908952" />
-      <window_info anchor="bottom" id="Debug" order="3" visible="true" weight="0.5053111" />
+      <window_info anchor="bottom" id="Run" order="2" visible="true" weight="0.21396054" />
+      <window_info anchor="bottom" id="Debug" order="3" weight="0.32169953" />
       <window_info anchor="bottom" id="Cvs" order="4" weight="0.25" />
       <window_info anchor="bottom" id="Inspection" order="5" weight="0.4" />
       <window_info anchor="bottom" id="TODO" order="6" />
@@ -378,7 +414,7 @@
         </line-breakpoint>
         <line-breakpoint enabled="true" suspend="THREAD" type="python-line">
           <url>file://$PROJECT_DIR$/greedy_algorithm.py</url>
-          <line>807</line>
+          <line>808</line>
           <option name="timeStamp" value="26" />
         </line-breakpoint>
         <line-breakpoint enabled="true" suspend="THREAD" type="python-line">
@@ -505,20 +541,6 @@ plt.show()</expression-string>
     <entry file="file://$PROJECT_DIR$/output/images/ground_truth_10.png">
       <provider selected="true" editor-type-id="images" />
     </entry>
-    <entry file="file://$PROJECT_DIR$/ARGS/args_default.conf">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="1080">
-          <caret line="72" column="13" selection-start-line="72" selection-start-column="13" selection-end-line="72" selection-end-column="13" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/greedy_algorithm.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="82">
-          <caret line="758" column="67" selection-start-line="758" selection-start-column="61" selection-end-line="758" selection-end-column="67" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/utils.py">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="82">
@@ -529,10 +551,45 @@ plt.show()</expression-string>
         </state>
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/example_run.sh">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="135">
+          <caret line="9" column="45" selection-start-line="9" selection-end-line="10" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/train_vae.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-3081" />
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/ARGS/args_10_300_nonlin.conf">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="31">
-          <caret line="34" column="15" selection-start-line="34" selection-start-column="15" selection-end-line="34" selection-end-column="15" />
+        <state relative-caret-position="71">
+          <caret line="30" column="15" lean-forward="true" selection-start-line="30" selection-start-column="15" selection-end-line="30" selection-end-column="15" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/ARGS/args_default.conf">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="402">
+          <caret line="45" column="5" selection-start-line="45" selection-end-line="45" selection-end-column="5" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/../../../../courses/LSDA/Lectures/Week1/Clustering_demo.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-312">
+          <folding>
+            <element signature="e#0#34#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/greedy_algorithm.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="58">
+          <caret line="558" column="50" lean-forward="true" selection-start-line="558" selection-start-column="50" selection-end-line="558" selection-end-column="50" />
         </state>
       </provider>
     </entry>

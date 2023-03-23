@@ -537,13 +537,14 @@ def detections_selection(vae_decoder, image, scores, bb, occlusion_scores, pred_
 
                 if len(torecheck)>0:
                   for j in torecheck:
+                    temp_temp_recons=temp_recons.copy()
                     temp_pred_labels=pred_labels.copy()
                     temp_pred_labels[i]=j
                     reconst_with_i_ch, recons_ch, nkl_ch = whole_reconstruction(
                         vae_decoder,
                         image,
                         output_size,
-                        temp_recons,
+                        temp_temp_recons,
                         temp_selected,
                         bb,
                         occlusion_scores,
@@ -566,7 +567,7 @@ def detections_selection(vae_decoder, image, scores, bb, occlusion_scores, pred_
                     if loss_with_i_ch < loss_with_i:
                         loss_with_i=loss_with_i_ch
                         pred_labels[i]=temp_pred_labels[i]
-
+                        recons=temp_temp_recons
 
 
             # find largest overlapping component with the current component

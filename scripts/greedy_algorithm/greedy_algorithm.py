@@ -570,6 +570,8 @@ def detections_selection(vae_decoder, image, scores, bb, occlusion_scores, pred_
                         recons=temp_temp_recons
 
 
+
+
             # find largest overlapping component with the current component
             j = find_largest_iou(i, bb, selected)
             # if args.draw:

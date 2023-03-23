@@ -24,8 +24,8 @@
       <file pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/greedy_algorithm.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="58">
-              <caret line="558" column="50" lean-forward="true" selection-start-line="558" selection-start-column="50" selection-end-line="558" selection-end-column="50" />
+            <state relative-caret-position="268">
+              <caret line="572" lean-forward="true" selection-start-line="572" selection-end-line="572" />
             </state>
           </provider>
         </entry>
@@ -414,7 +414,7 @@
         </line-breakpoint>
         <line-breakpoint enabled="true" suspend="THREAD" type="python-line">
           <url>file://$PROJECT_DIR$/greedy_algorithm.py</url>
-          <line>808</line>
+          <line>810</line>
           <option name="timeStamp" value="26" />
         </line-breakpoint>
         <line-breakpoint enabled="true" suspend="THREAD" type="python-line">
@@ -588,8 +588,8 @@ plt.show()</expression-string>
     </entry>
     <entry file="file://$PROJECT_DIR$/greedy_algorithm.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="58">
-          <caret line="558" column="50" lean-forward="true" selection-start-line="558" selection-start-column="50" selection-end-line="558" selection-end-column="50" />
+        <state relative-caret-position="268">
+          <caret line="572" lean-forward="true" selection-start-line="572" selection-end-line="572" />
         </state>
       </provider>
     </entry>

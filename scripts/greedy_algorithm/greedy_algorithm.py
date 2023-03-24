@@ -533,7 +533,8 @@ def detections_selection(vae_decoder, image, scores, bb, occlusion_scores, pred_
                 if pred_labels[i]>=0 and pred_labels[i]==args.recheck[0]:
                     torecheck=[args.recheck[1]]
                 elif args.recheck[0]==-1:
-                    torecheck=list(range(args.num_class)).pop(pred_labels[i])
+                    torecheck=list(range(args.num_class))
+                    torecheck.pop(pred_labels[i])
 
                 if len(torecheck)>0:
                   for j in torecheck:

@@ -5,6 +5,7 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="757946fe-d849-4e9e-9d86-3e64e1a9b1ab" name="Changes" comment="">
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/greedy_algorithm.py" beforeDir="false" afterPath="$PROJECT_DIR$/greedy_algorithm.py" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
@@ -24,8 +25,8 @@
       <file pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/greedy_algorithm.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="268">
-              <caret line="572" lean-forward="true" selection-start-line="572" selection-end-line="572" />
+            <state relative-caret-position="304">
+              <caret line="541" column="28" selection-start-line="541" selection-start-column="28" selection-end-line="541" selection-end-column="28" />
             </state>
           </provider>
         </entry>
@@ -33,7 +34,7 @@
       <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/../../../../courses/LSDA/Lectures/Week1/Clustering_demo.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="-312">
+            <state>
               <folding>
                 <element signature="e#0#34#0" expanded="true" />
               </folding>
@@ -52,15 +53,13 @@
       </file>
       <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/train_vae.py">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="-3081" />
-          </provider>
+          <provider selected="true" editor-type-id="text-editor" />
         </entry>
       </file>
       <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/utils.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="82">
+            <state relative-caret-position="6990">
               <caret line="466" column="19" selection-start-line="466" selection-start-column="13" selection-end-line="466" selection-end-column="19" />
               <folding>
                 <element signature="e#0#18#0" expanded="true" />
@@ -72,8 +71,8 @@
       <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/ARGS/args_10_300_nonlin.conf">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="71">
-              <caret line="30" column="15" lean-forward="true" selection-start-line="30" selection-start-column="15" selection-end-line="30" selection-end-column="15" />
+            <state relative-caret-position="450">
+              <caret line="30" column="15" selection-start-line="30" selection-start-column="15" selection-end-line="30" selection-end-column="15" />
             </state>
           </provider>
         </entry>
@@ -81,7 +80,7 @@
       <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/ARGS/args_default.conf">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="402">
+            <state relative-caret-position="675">
               <caret line="45" column="5" selection-start-line="45" selection-end-line="45" selection-end-column="5" />
             </state>
           </provider>
@@ -93,7 +92,6 @@
     <findStrings>
       <find>max</find>
       <find>get_data</find>
-      <find>recheck</find>
       <find>predir</find>
       <find>adjust_rotate</find>
       <find>angle</find>
@@ -103,6 +101,7 @@
       <find>sampl</find>
       <find>test_latent</find>
       <find>selection</find>
+      <find>recheck</find>
     </findStrings>
   </component>
   <component name="FlaskConsoleOptions" custom-start-script="import sys&#10;sys.path.extend([WORKING_DIR_AND_PYTHON_PATHS])&#10;from flask.cli import ScriptInfo&#10;locals().update(ScriptInfo(create_app=None).load_app().make_shell_context())&#10;print(&quot;Python %s on %s\nApp: %s [%s]\nInstance: %s&quot; % (sys.version, sys.platform, app.import_name, app.env, app.instance_path))">
@@ -141,6 +140,7 @@
     <option name="stateVersion" value="1" />
   </component>
   <component name="ProjectFrameBounds">
+    <option name="x" value="38" />
     <option name="y" value="23" />
     <option name="width" value="1339" />
     <option name="height" value="774" />
@@ -183,7 +183,7 @@
   <component name="PropertiesComponent">
     <property name="WebServerToolWindowFactoryState" value="false" />
     <property name="settings.editor.selected.configurable" value="com.jetbrains.python.configuration.PyActiveSdkModuleConfigurable" />
-    <property name="two.files.diff.last.used.file" value="$PROJECT_DIR$/output/mr0" />
+    <property name="two.files.diff.last.used.file" value="$PROJECT_DIR$/output/mr1" />
   </component>
   <component name="RunDashboard">
     <option name="ruleStates">
@@ -324,15 +324,15 @@
     <servers />
   </component>
   <component name="ToolWindowManager">
-    <frame x="0" y="23" width="1339" height="774" extended-state="0" />
+    <frame x="38" y="23" width="1339" height="774" extended-state="0" />
     <editor active="true" />
     <layout>
-      <window_info active="true" content_ui="combo" id="Project" order="0" visible="true" weight="0.19660756" />
+      <window_info active="true" content_ui="combo" id="Project" order="0" visible="true" weight="0.20585968" />
       <window_info id="Structure" order="1" side_tool="true" weight="0.25" />
       <window_info id="Favorites" order="2" side_tool="true" />
       <window_info anchor="bottom" id="Message" order="0" />
       <window_info anchor="bottom" id="Find" order="1" />
-      <window_info anchor="bottom" id="Run" order="2" visible="true" weight="0.21396054" />
+      <window_info anchor="bottom" id="Run" order="2" weight="0.21396054" />
       <window_info anchor="bottom" id="Debug" order="3" weight="0.32169953" />
       <window_info anchor="bottom" id="Cvs" order="4" weight="0.25" />
       <window_info anchor="bottom" id="Inspection" order="5" weight="0.4" />
@@ -538,15 +538,19 @@ plt.show()</expression-string>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/output/images/ground_truth_34.png" />
-    <entry file="file://$PROJECT_DIR$/output/images/ground_truth_10.png">
-      <provider selected="true" editor-type-id="images" />
-    </entry>
-    <entry file="file://$PROJECT_DIR$/utils.py">
+    <entry file="file://$PROJECT_DIR$/output/images/ground_truth_10.png" />
+    <entry file="file://$PROJECT_DIR$/greedy_algorithm.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="82">
-          <caret line="466" column="19" selection-start-line="466" selection-start-column="13" selection-end-line="466" selection-end-column="19" />
+        <state relative-caret-position="304">
+          <caret line="541" column="28" selection-start-line="541" selection-start-column="28" selection-end-line="541" selection-end-column="28" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/../../../../courses/LSDA/Lectures/Week1/Clustering_demo.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state>
           <folding>
-            <element signature="e#0#18#0" expanded="true" />
+            <element signature="e#0#34#0" expanded="true" />
           </folding>
         </state>
       </provider>
@@ -559,37 +563,29 @@ plt.show()</expression-string>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/train_vae.py">
+      <provider selected="true" editor-type-id="text-editor" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/utils.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-3081" />
+        <state relative-caret-position="6990">
+          <caret line="466" column="19" selection-start-line="466" selection-start-column="13" selection-end-line="466" selection-end-column="19" />
+          <folding>
+            <element signature="e#0#18#0" expanded="true" />
+          </folding>
+        </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/ARGS/args_10_300_nonlin.conf">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="71">
-          <caret line="30" column="15" lean-forward="true" selection-start-line="30" selection-start-column="15" selection-end-line="30" selection-end-column="15" />
+        <state relative-caret-position="450">
+          <caret line="30" column="15" selection-start-line="30" selection-start-column="15" selection-end-line="30" selection-end-column="15" />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/ARGS/args_default.conf">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="402">
+        <state relative-caret-position="675">
           <caret line="45" column="5" selection-start-line="45" selection-end-line="45" selection-end-column="5" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/../../../../courses/LSDA/Lectures/Week1/Clustering_demo.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-312">
-          <folding>
-            <element signature="e#0#34#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/greedy_algorithm.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="268">
-          <caret line="572" lean-forward="true" selection-start-line="572" selection-end-line="572" />
         </state>
       </provider>
     </entry>

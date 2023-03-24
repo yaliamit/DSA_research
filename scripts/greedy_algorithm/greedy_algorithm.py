@@ -518,6 +518,7 @@ def detections_selection(vae_decoder, image, scores, bb, occlusion_scores, pred_
                 img_index,
                 done_recon
             )
+            besti=i
             # compute loss between image and complete reconstruction done using the i'th selection
             if nkl is not None:
                 temp_selected_nkl_with_i = sum([recons[box_id][1] for box_id in temp_selected])
@@ -538,8 +539,8 @@ def detections_selection(vae_decoder, image, scores, bb, occlusion_scores, pred_
 
                 if len(torecheck)>0:
                   for j in torecheck:
-                    temp_selected=selected.copy()
-                    temp_selected.append(j)
+                    temp_temp_selected=selected.copy()
+                    temp_temp_selected.append(j)
                     temp_temp_recons=temp_recons.copy()
                     temp_pred_labels=pred_labels.copy()
                     temp_pred_labels[i]=j
@@ -548,7 +549,7 @@ def detections_selection(vae_decoder, image, scores, bb, occlusion_scores, pred_
                         image,
                         output_size,
                         temp_temp_recons,
-                        temp_selected,
+                        temp_temp_selected,
                         bb,
                         occlusion_scores,
                         temp_pred_labels,
@@ -558,7 +559,7 @@ def detections_selection(vae_decoder, image, scores, bb, occlusion_scores, pred_
                         done_recon
                      )
                     if nkl_ch is not None:
-                        temp_selected_nkl_with_i_ch = sum([recons_ch[box_id][1] for box_id in temp_selected])
+                        temp_selected_nkl_with_i_ch = sum([recons_ch[box_id][1] for box_id in temp_temp_selected])
                         loss_with_i_ch = np.sum((image - reconst_with_i_ch) * (image - reconst_with_i_ch)) + args.lamb * len(
                             temp_selected)
                         if args.draw:
@@ -571,8 +572,8 @@ def detections_selection(vae_decoder, image, scores, bb, occlusion_scores, pred_
                         loss_with_i=loss_with_i_ch
                         pred_labels[i]=temp_pred_labels[i]
                         recons=temp_temp_recons
-
-
+                        temp_selected=temp_temp_selected
+                        besti=j
 
 
             # find largest overlapping component with the current component
@@ -611,17 +612,18 @@ def detections_selection(vae_decoder, image, scores, bb, occlusion_scores, pred_
             # compare the losses from different selection configurations and choose the configuration which
             # minimizes the loss
             if loss_with_i < min(lowest_loss, loss_i_no_j):
-                selected.append(i)
-                done_recon.append(i)
+                selected=temp_selected
+                done_recon.append(besti)
                 # update minimum loss
                 lowest_loss = loss_with_i
                 # if args.draw:
                 #     print('***********selected', selected, lowest_loss)
             elif loss_i_no_j < min(lowest_loss, loss_with_i):
+                selected=temp_selected
                 selected.remove(j)
                 selected.append(i)
                 done_recon.remove(j)
-                done_recon.append(i)
+                done_recon.append(besti)
                 recons=temp_recons
                 # update minimum loss
                 lowest_loss = loss_i_no_j

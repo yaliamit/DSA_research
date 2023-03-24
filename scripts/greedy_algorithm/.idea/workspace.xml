@@ -5,7 +5,6 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="757946fe-d849-4e9e-9d86-3e64e1a9b1ab" name="Changes" comment="">
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/greedy_algorithm.py" beforeDir="false" afterPath="$PROJECT_DIR$/greedy_algorithm.py" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
@@ -28,8 +27,8 @@
       <file pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/greedy_algorithm.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="331">
-              <caret line="541" column="43" lean-forward="true" selection-start-line="541" selection-start-column="43" selection-end-line="541" selection-end-column="43" />
+            <state relative-caret-position="71">
+              <caret line="615" column="40" lean-forward="true" selection-start-line="615" selection-start-column="40" selection-end-line="615" selection-end-column="40" />
             </state>
           </provider>
         </entry>
@@ -114,6 +113,7 @@
       <find>test_latent</find>
       <find>selection</find>
       <find>recheck</find>
+      <find>done_recon</find>
     </findStrings>
   </component>
   <component name="FlaskConsoleOptions" custom-start-script="import sys&#10;sys.path.extend([WORKING_DIR_AND_PYTHON_PATHS])&#10;from flask.cli import ScriptInfo&#10;locals().update(ScriptInfo(create_app=None).load_app().make_shell_context())&#10;print(&quot;Python %s on %s\nApp: %s [%s]\nInstance: %s&quot; % (sys.version, sys.platform, app.import_name, app.env, app.instance_path))">
@@ -339,13 +339,13 @@
     <frame x="38" y="23" width="1339" height="774" extended-state="0" />
     <editor active="true" />
     <layout>
-      <window_info content_ui="combo" id="Project" order="0" sideWeight="0.49905482" visible="true" weight="0.20585968" />
+      <window_info content_ui="combo" id="Project" order="0" sideWeight="0.49833333" visible="true" weight="0.20585968" />
       <window_info id="Structure" order="1" side_tool="true" weight="0.25" />
-      <window_info active="true" id="Favorites" order="2" sideWeight="0.50094515" side_tool="true" visible="true" weight="0.20585968" />
+      <window_info id="Favorites" order="2" sideWeight="0.50166667" side_tool="true" visible="true" weight="0.20585968" />
       <window_info anchor="bottom" id="Message" order="0" />
       <window_info anchor="bottom" id="Find" order="1" />
       <window_info anchor="bottom" id="Run" order="2" weight="0.21396054" />
-      <window_info anchor="bottom" id="Debug" order="3" visible="true" weight="0.19726859" />
+      <window_info active="true" anchor="bottom" id="Debug" order="3" visible="true" weight="0.08952959" />
       <window_info anchor="bottom" id="Cvs" order="4" weight="0.25" />
       <window_info anchor="bottom" id="Inspection" order="5" weight="0.4" />
       <window_info anchor="bottom" id="TODO" order="6" />
@@ -426,7 +426,7 @@
         </line-breakpoint>
         <line-breakpoint enabled="true" suspend="THREAD" type="python-line">
           <url>file://$PROJECT_DIR$/greedy_algorithm.py</url>
-          <line>538</line>
+          <line>539</line>
           <option name="timeStamp" value="29" />
         </line-breakpoint>
       </breakpoints>
@@ -603,8 +603,8 @@ plt.show()</expression-string>
     </entry>
     <entry file="file://$PROJECT_DIR$/greedy_algorithm.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="331">
-          <caret line="541" column="43" lean-forward="true" selection-start-line="541" selection-start-column="43" selection-end-line="541" selection-end-column="43" />
+        <state relative-caret-position="71">
+          <caret line="615" column="40" lean-forward="true" selection-start-line="615" selection-start-column="40" selection-end-line="615" selection-end-column="40" />
         </state>
       </provider>
     </entry>

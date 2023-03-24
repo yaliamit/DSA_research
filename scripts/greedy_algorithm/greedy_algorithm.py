@@ -539,8 +539,8 @@ def detections_selection(vae_decoder, image, scores, bb, occlusion_scores, pred_
 
                 if len(torecheck)>0:
                   for j in torecheck:
-                    temp_temp_selected=selected.copy()
-                    temp_temp_selected.append(j)
+                    # temp_temp_selected=selected.copy()
+                    # temp_temp_selected.append(j)
                     temp_temp_recons=temp_recons.copy()
                     temp_pred_labels=pred_labels.copy()
                     temp_pred_labels[i]=j
@@ -549,7 +549,7 @@ def detections_selection(vae_decoder, image, scores, bb, occlusion_scores, pred_
                         image,
                         output_size,
                         temp_temp_recons,
-                        temp_temp_selected,
+                        temp_selected,
                         bb,
                         occlusion_scores,
                         temp_pred_labels,
@@ -559,7 +559,7 @@ def detections_selection(vae_decoder, image, scores, bb, occlusion_scores, pred_
                         done_recon
                      )
                     if nkl_ch is not None:
-                        temp_selected_nkl_with_i_ch = sum([recons_ch[box_id][1] for box_id in temp_temp_selected])
+                        temp_selected_nkl_with_i_ch = sum([recons_ch[box_id][1] for box_id in temp_selected])
                         loss_with_i_ch = np.sum((image - reconst_with_i_ch) * (image - reconst_with_i_ch)) + args.lamb * len(
                             temp_selected)
                         if args.draw:
@@ -572,7 +572,6 @@ def detections_selection(vae_decoder, image, scores, bb, occlusion_scores, pred_
                         loss_with_i=loss_with_i_ch
                         pred_labels[i]=temp_pred_labels[i]
                         recons=temp_temp_recons
-                        temp_selected=temp_temp_selected
                         besti=j
 
 

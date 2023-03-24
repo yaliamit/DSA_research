@@ -501,8 +501,8 @@ def detections_selection(vae_decoder, image, scores, bb, occlusion_scores, pred_
             continue
         if args.process_likelihoods:
             temp_recons=recons.copy()
+            selected.append(i)
             temp_selected = selected.copy()
-            temp_selected.append(i)
             # run whole reconstruction algorithm on image adding i'th prediction
             reconst_with_i, recons,nkl = whole_reconstruction(
                 vae_decoder,
@@ -611,8 +611,7 @@ def detections_selection(vae_decoder, image, scores, bb, occlusion_scores, pred_
             # compare the losses from different selection configurations and choose the configuration which
             # minimizes the loss
             if loss_with_i < min(lowest_loss, loss_i_no_j):
-                selected=temp_selected
-                done_recon.append(besti)
+                done_recon.append(i)
                 # update minimum loss
                 lowest_loss = loss_with_i
                 # if args.draw:
@@ -622,7 +621,7 @@ def detections_selection(vae_decoder, image, scores, bb, occlusion_scores, pred_
                 selected.remove(j)
                 selected.append(i)
                 done_recon.remove(j)
-                done_recon.append(besti)
+                done_recon.append(i)
                 recons=temp_recons
                 # update minimum loss
                 lowest_loss = loss_i_no_j

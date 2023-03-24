@@ -538,6 +538,8 @@ def detections_selection(vae_decoder, image, scores, bb, occlusion_scores, pred_
 
                 if len(torecheck)>0:
                   for j in torecheck:
+                    temp_selected=selected.copy()
+                    temp_selected.append(j)
                     temp_temp_recons=temp_recons.copy()
                     temp_pred_labels=pred_labels.copy()
                     temp_pred_labels[i]=j

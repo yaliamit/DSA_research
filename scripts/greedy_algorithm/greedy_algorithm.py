@@ -420,6 +420,7 @@ def whole_reconstruction(vae_decoder, image, output_size, recons, temp_selected,
             # find occlusion mask
             mask=find_mask(bb_i, target_size, output, args)
             if args.draw:
+                global STEP
                 save_location = os.path.join(args.dn, 'output', 'images',
                                              'STEP' + str(STEP) + '_target_' + str(index) + '_' + str(back))
                 plt.imshow(target.reshape((target_size[0], target_size[1], 3)) * mask.detach().numpy().reshape(

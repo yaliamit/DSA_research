@@ -394,6 +394,7 @@ def whole_reconstruction(vae_decoder, image, output_size, recons, temp_selected,
     :returns: (tensor, list[tensor]) the reconstructed whole image and an array of the singly
         reconstructed components, and the kl cost of latest reconstruction added to the reconstruction list.
     """
+    global STEP
     loc_index_list=[]
     output = np.zeros((output_size[0], output_size[1], 3))
     # Make background
@@ -420,7 +421,7 @@ def whole_reconstruction(vae_decoder, image, output_size, recons, temp_selected,
             # find occlusion mask
             mask=find_mask(bb_i, target_size, output, args)
             if args.draw:
-                global STEP
+
                 save_location = os.path.join(args.dn, 'output', 'images',
                                              'STEP' + str(STEP) + '_target_' + str(index) + '_' + str(back))
                 plt.imshow(target.reshape((target_size[0], target_size[1], 3)) * mask.detach().numpy().reshape(
@@ -466,7 +467,7 @@ def whole_reconstruction(vae_decoder, image, output_size, recons, temp_selected,
         compute_update_of_full_output(output,recons[index][0],upperleft,args)
         loc_index_list+=[index]
     if args.draw:
-        global STEP
+
         # save reconstructed image
         plt.figure()
         plt.imshow(output.reshape(args.test_image_size, args.test_image_size, 3))

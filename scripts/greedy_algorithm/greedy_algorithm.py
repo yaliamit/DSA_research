@@ -424,7 +424,8 @@ def whole_reconstruction(vae_decoder, image, output_size, recons, temp_selected,
             # if we have fewer than args.occlusion_number_of_pixels pixels above the occlusion threshold, no reconstruction
             if ((target * mask).sum(2) > args.occlusion_thresh).sum() < args.occlusion_number_of_pixels:
                 recons.append(None)
-                #print('Occlusion too large for image',index,pred_labels[index],((target * mask).sum(2) > args.occlusion_thresh).sum())
+                if args.draw:
+                 print('Occlusion too large for image',index,pred_labels[index],((target * mask).sum(2) > args.occlusion_thresh).sum())
                 return np.zeros((output_size[0], output_size[1], 3)), recons, None
             else:
                 single_recon, nkl = single_reconstruction(
@@ -448,6 +449,8 @@ def whole_reconstruction(vae_decoder, image, output_size, recons, temp_selected,
 
 
                 count1,count2=compute_detection_visible_support(recons[-1][0], output, upperleft, args)
+                if args.draw:
+                    print('count1',count1,'count2',count2)
                 if count2==0:
                     return np.zeros((output_size[0], output_size[1], 3)), recons, None
                 elif count1 / count2 < args.visible_thresh or count1 < args.occlusion_number_of_pixels:

@@ -424,7 +424,7 @@ def whole_reconstruction(vae_decoder, image, output_size, recons, temp_selected,
 
                 save_location = os.path.join(args.dn, 'output', 'images',
                                              'STEP' + str(STEP) + '_target_' + str(index) + '_' + str(back))
-                plt.imshow(target.reshape((target_size[0], target_size[1], 3)) * mask.detach().numpy().reshape(
+                plt.imshow(target.reshape((target_size[0], target_size[1], 3)) * mask.reshape(
                     (target_size[0], target_size[1], 3)))
                 plt.savefig(save_location)
             # if we have fewer than args.occlusion_number_of_pixels pixels above the occlusion threshold, no reconstruction

@@ -27,8 +27,8 @@
       <file pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/greedy_algorithm.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="364">
-              <caret line="469" lean-forward="true" selection-start-line="469" selection-end-line="469" />
+            <state relative-caret-position="244">
+              <caret line="426" column="85" selection-start-line="426" selection-start-column="85" selection-end-line="426" selection-end-column="85" />
             </state>
           </provider>
         </entry>
@@ -597,8 +597,8 @@ plt.show()</expression-string>
     </entry>
     <entry file="file://$PROJECT_DIR$/greedy_algorithm.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="364">
-          <caret line="469" lean-forward="true" selection-start-line="469" selection-end-line="469" />
+        <state relative-caret-position="244">
+          <caret line="426" column="85" selection-start-line="426" selection-start-column="85" selection-end-line="426" selection-end-column="85" />
         </state>
       </provider>
     </entry>

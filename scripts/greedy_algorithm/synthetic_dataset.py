@@ -410,15 +410,15 @@ if __name__ == "__main__":
     args=get_args()
     #make_two_object_scenes(args.cnn_num_train+args.cnn_num_valid,args.predir,args,2)
     #make_single_images(args.predir,args)
-    generate_detection_test_data(args.num_test_images,args.predir,args,valid=False)
+    #generate_detection_test_data(args.num_test_images,args.predir,args,valid=False)
 
     #generate_detection_test_data(args.num_test_images,args.predir,args,valid=True)
 
     if args.draw:
 
         #show_test_data(args.predir,args,valid=True)
-        #show_test_data(args.predir,args,valid=False)
-        show_train_data(args.predir,args)
+        show_test_data(args.predir,args,valid=False)
+        #show_train_data(args.predir,args)
         #show_VAE_data(args.predir,args)
 
 

@@ -900,7 +900,7 @@ if __name__ == "__main__":
     if args.trans_type == 'None':
         args.trans_space_dimension=0
 
-
+    t1=time.time()
     os.system('rm output/output_process*')
     # run on CPU
     device=None
@@ -923,7 +923,7 @@ if __name__ == "__main__":
         device = torch.device("cpu")
         print("executing on cpu...")
         main(device, 1, args)
-
+    print('Time',time.time()-t1)
 
     process_results(world_size, args, device)
 
